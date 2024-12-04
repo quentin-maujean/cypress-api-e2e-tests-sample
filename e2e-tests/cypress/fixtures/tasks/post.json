@@ -1,0 +1,27 @@
+{
+    "create": {
+        "user": {
+            "name": "Julian Solo",
+            "email": "julian.solo@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "read a book",
+            "tags": [
+                "javascript",
+                "go",
+                "java"
+            ]
+        }
+    },
+    "duplicated": {
+        "user": {
+            "name": "Berenge Berenices",
+            "email": "berenge.berenices@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Make a chocolate cake"
+        }
+    }
+}

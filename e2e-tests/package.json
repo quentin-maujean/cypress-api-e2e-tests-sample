@@ -1,0 +1,17 @@
+{
+  "name": "cypress-api-sample",
+  "version": "1.0.0",
+  "description": "e2e tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "Klebson Leite",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.2.0",
+    "cypress-plugin-api": "^2.11.1",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.1.0"
+  }
+}

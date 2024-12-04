@@ -1,0 +1,26 @@
+{
+    "update": {
+        "user": {
+            "name": "Mariah Melian",
+            "email": "mariah.melian@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "go to the supermarket",
+            "tags": [
+                "milk",
+                "eggs"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Jilian Coast",
+            "email": "julian.coast@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "buy a TV"
+        }
+    }
+}

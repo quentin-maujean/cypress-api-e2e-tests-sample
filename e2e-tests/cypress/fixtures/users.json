@@ -1,0 +1,30 @@
+{
+  "login": {
+    "name": "John Due",
+    "email": "john.due@test.com",
+    "password": "pwd123"
+  },
+  "invalid_password": {
+    "email": "test@test.com",
+    "password": "pwd321"
+  },
+  "non_existent_email": {
+    "email": "aaaaaabbbbbbb@test.com",
+    "password": "pwd123"
+  },
+  "create": {
+    "name": "Julia Forrest",
+    "email": "julia.forrest@test.com",
+    "password": "pwd123"
+  },
+  "duplicated_email": {
+    "name": "Henry Ford",
+    "email": "henry.ford@test.com",
+    "password": "pwd123"
+  },
+  "required": {
+    "name": "Felix Linh",
+    "email": "felix.linhd@test.com",
+    "password": "pwd123"
+  }
+}

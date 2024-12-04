@@ -1,0 +1,57 @@
+{
+    "list": {
+        "user": {
+            "name": "Minos Griffon",
+            "email": "minos.griffon@test.com",
+            "password": "pwd123"
+        },
+        "tasks": [
+            {
+                "name": "8at pasta",
+                "tags": [
+                    "penne",
+                    "spaghetti"
+                ]
+            },
+            {
+                "name": "8at pizza",
+                "tags": [
+                    "marguerita",
+                    "muzzarella",
+                    "diavola"
+                ]
+            },
+            {
+                "name": "8at lasagna",
+                "tags": [
+                    "Bolognese",
+                    "ham"
+                ]
+            }
+        ]
+    },
+    "unique": {
+        "user": {
+            "name": "Tony Smith",
+            "email": "tony.smith@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "go to the gym",
+            "tags": [
+                "8:00AM",
+                "6:00PM"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Allan Star",
+            "email": "allan.star@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "build a coffe machine"
+        }
+    }
+}

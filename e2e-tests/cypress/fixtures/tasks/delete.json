@@ -1,0 +1,26 @@
+{
+    "remove": {
+        "user": {
+            "name": "Amely Poolan",
+            "email": "amely.poolan@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "shopping",
+            "tags": [
+                "bag",
+                "cellphone"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Gullian Brussels",
+            "email": "gullian.brussels@test.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "eat a chocolate"
+        }
+    }
+}
