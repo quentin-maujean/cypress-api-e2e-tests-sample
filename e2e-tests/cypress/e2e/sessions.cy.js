@@ -1,46 +1,40 @@
-describe('POST /sessions', function () {
+describe("POST /sessions", function () {
+  beforeEach(function () {
+    cy.fixture("users").then(function (users) {
+      this.users = users;
+    });
+  });
 
-    beforeEach(function () {
+  it("user session", function () {
+    const userData = this.users.login;
 
-        cy.fixture('users').then(function (users) {
-            this.users = users
-        })
-    })
+    cy.task("removeUser", userData.email);
+    cy.postUser(userData);
 
-    it('user session', function () {
-        const userData = this.users.login
+    cy.postSession(userData).then((response) => {
+      expect(response.status).to.eq(200);
 
-        cy.task('removeUser', userData.email)
-        cy.postUser(userData)
+      const { user, token } = response.body;
 
-        cy.postSession(userData)
-            .then(response => {
+      expect(user.name).to.eq(userData.name);
+      expect(user.email).to.eq(userData.email);
+      expect(token).not.to.be.empty;
+    });
+  });
 
-                expect(response.status).to.eq(200)
+  it("invalid password", function () {
+    const user = this.users.invalid_password || 0;
 
-                const { user, token } = response.body
+    cy.postSession(user).then((response) => {
+      expect(response.status).to.eq(401);
+    });
+  });
 
-                expect(user.name).to.eq(userData.name)
-                expect(user.email).to.eq(userData.email)
-                expect(token).not.to.be.empty
-            })
-    })
+  it("invalid email", function () {
+    const user = this.users.non_existent_email;
 
-    it('invalid password', function () {
-        const user = this.users.invalid_password
-
-        cy.postSession(user)
-            .then(response => {
-                expect(response.status).to.eq(401)
-            })
-    })
-
-    it('invalid email', function () {
-        const user = this.users.non_existent_email
-
-        cy.postSession(user)
-            .then(response => {
-                expect(response.status).to.eq(401)
-            })
-    })
-})
+    cy.postSession(user).then((response) => {
+      expect(response.status).to.eq(401);
+    });
+  });
+});
