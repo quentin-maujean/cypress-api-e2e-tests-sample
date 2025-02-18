@@ -23,7 +23,7 @@ describe("POST /sessions", function () {
   });
 
   it("invalid password", function () {
-    const user = this.users.invalid_password;
+    const user = this.users.invalid_password || 0;
 
     cy.postSession(user).then((response) => {
       expect(response.status).to.eq(401);
